@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Auto-advance carousel
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 3000);
 
   // Mobile Navigation Toggle
   const hamburger = document.createElement("div");
@@ -102,3 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// const openHidden = document.getElementById('learn-btn');
+
+// openHidden.addEventListener('click', function(){
+//   document.getElementById('hidden-content').style.display = "block";
+// })
