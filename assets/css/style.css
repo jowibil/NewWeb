@@ -15,6 +15,7 @@
         /* = 24px */
         --fs-3: 1.25rem;
         /* = 20px */
+        --fs-33: 1rem;
         --fs-4: 0.875rem;
         /* = 14px */
         --fs-5: 0.75rem;
@@ -301,7 +302,7 @@ section {
     margin-top: 2rem;
 }
 .section-text{
-    font-size: var(--fs-4);
+    font-size: var(--fs-3);
 }
 
 .issue-tab {
@@ -467,6 +468,14 @@ footer {
 
 /* Media Queries for responsive design */
 /* Small screens (550px and up) */
+@media (max-width: 550px){
+    .section-text{
+        font-size: var(--fs-33);
+    }
+}
+
+
+
 @media (min-width: 550px) {
     .carousel {
         height: 320px;
@@ -502,10 +511,6 @@ footer {
     .carousel-content h2 {
         font-size: 1.8rem;
     }
-    .section-text{
-        font-size: var(--fs-3);
-    }
-
 }
 
 /* Tablets (768px and up) */
@@ -560,9 +565,6 @@ footer {
 
     .carousel-content p {
         font-size: 1.1rem;
-    }
-    .section-text{
-        font-size: var(--fs-2);
     }
 }
 
