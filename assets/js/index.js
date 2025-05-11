@@ -85,20 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   issueTabs.forEach((tab) => {
     tab.addEventListener("click", function () {
-      // Find the parent container to only affect tabs in this section
       const parentContainer = this.closest(".issues-container");
       const sectionTabs = parentContainer.querySelectorAll(".issue-tab");
       const sectionContents =
         parentContainer.querySelectorAll(".issue-content");
 
+      const tabId = this.getAttribute("data-tab");
+      const contentElement = document.getElementById(tabId);
+
+      const isActive = this.classList.contains("active");
+
       // Deactivate all tabs and contents in this section
       sectionTabs.forEach((t) => t.classList.remove("active"));
       sectionContents.forEach((c) => c.classList.remove("active"));
 
-      // Activate clicked tab and corresponding content
-      this.classList.add("active");
-      const tabId = this.getAttribute("data-tab");
-      document.getElementById(tabId).classList.add("active");
+      // If it wasn't active before, activate it
+      if (!isActive) {
+        this.classList.add("active");
+        contentElement.classList.add("active");
+      }
     });
   });
 });
