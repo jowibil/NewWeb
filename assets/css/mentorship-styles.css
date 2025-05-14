@@ -78,7 +78,7 @@
 .mhero {
     position: relative;
     height: 80vh;
-    background: url('/assets/images/mentorship-bg.png') center/cover no-repeat;
+    background: url('../images/mentorship-bg.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
