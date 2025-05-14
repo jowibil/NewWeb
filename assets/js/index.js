@@ -107,8 +107,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// const openHidden = document.getElementById('learn-btn');
 
-// openHidden.addEventListener('click', function(){
-//   document.getElementById('hidden-content').style.display = "block";
-// })
+document.querySelectorAll(".open-modal").forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("modal").style.display = "flex";
+  });
+});
+
+document.getElementById("modal-close-btn").addEventListener("click", () => {
+  document.getElementById("modal").style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
