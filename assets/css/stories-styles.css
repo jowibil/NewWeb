@@ -379,7 +379,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .stories-content {
         font-size: 16px;
     }
@@ -400,11 +400,11 @@
     }
 
     .shero-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .success-sstories {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .stories-heading {
