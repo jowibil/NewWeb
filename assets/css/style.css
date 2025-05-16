@@ -8,18 +8,18 @@
     --success-color: #8A9A5B;
 
     --fs-base: 0.85rem;
-        /* = 13.6px */
-        --fs-1: 1.875rem;
-        /* = 30px */
-        --fs-2: 1.5rem;
-        /* = 24px */
-        --fs-3: 1.25rem;
-        /* = 20px */
-        --fs-33: 1rem;
-        --fs-4: 0.875rem;
-        /* = 14px */
-        --fs-5: 0.75rem;
-        /* = 12px */
+    /* = 13.6px */
+    --fs-1: 1.875rem;
+    /* = 30px */
+    --fs-2: 1.5rem;
+    /* = 24px */
+    --fs-3: 1.25rem;
+    /* = 20px */
+    --fs-33: 1rem;
+    --fs-4: 0.875rem;
+    /* = 14px */
+    --fs-5: 0.75rem;
+    /* = 12px */
 }
 
 body {
@@ -170,8 +170,10 @@ section {
 
 .card-img {
     width: 100%;
-    height: 200px;
-    object-fit:cover;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* or cover if you want cropping */
 }
 
 .card-content {
@@ -220,7 +222,8 @@ section {
 .issues-container {
     margin-top: 2rem;
 }
-.section-text{
+
+.section-text {
     font-size: var(--fs-3);
 }
 
@@ -279,7 +282,8 @@ footer {
     margin-bottom: 1.5rem;
     color: var(--secondary-color);
 }
-.footer-col p{
+
+.footer-col p {
     text-align: justify;
 }
 
@@ -339,8 +343,8 @@ footer {
 
 /* Media Queries for responsive design */
 /* Small screens (550px and up) */
-@media (max-width: 550px){
-    .section-text{
+@media (max-width: 550px) {
+    .section-text {
         font-size: var(--fs-33);
     }
 }
@@ -359,7 +363,8 @@ footer {
     .carousel-content p {
         font-size: 1rem;
     }
-    .section-text{
+
+    .section-text {
         font-size: var(--fs-3);
     }
 }
