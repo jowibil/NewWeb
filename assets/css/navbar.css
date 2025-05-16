@@ -38,47 +38,13 @@ header {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    display: block;
+    padding: 10px 15px;
 }
 
 .nav-link:hover {
     color: var(--secondary-color);
 }
-
-/* .dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 4px;
-}
-
-.dropdown-content a {
-    color: var(--dark-color);
-    padding: 12px 14px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.menu-icn {
-    width: 30px;
-    height: 30px;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    color: var(--secondary-color);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-} */
 
 /* Responsive Styles */
 /* Mobile First Approach (base styles for smallest screens) */
