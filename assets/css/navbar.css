@@ -39,7 +39,7 @@ header {
     font-weight: 500;
     transition: color 0.3s;
     display: block;
-    padding: 10px 15px;
+    padding: 6px 4px;
 }
 
 .nav-link:hover {
