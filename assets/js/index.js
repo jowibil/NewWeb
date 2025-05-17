@@ -125,3 +125,10 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+const images = document.querySelectorAll('img[loading="lazy"]');
+images.forEach((image) => {
+  image.addEventListener("load", () => {
+    image.classList.add("loaded");
+  });
+});
