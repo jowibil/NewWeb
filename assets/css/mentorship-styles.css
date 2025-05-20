@@ -53,7 +53,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.788);
     transition: transform 0.3s ease;
 }
-.mentor-card:hover{
+
+.mentor-card:hover {
     transform: translateY(-5px);
 }
 
@@ -82,51 +83,56 @@
     max-width: 800px;
     margin: auto;
 }
-.mentors-title{
+
+.mentors-title {
     font-family: "Bebas Neue", serif;
     font-size: 50px;
     text-align: center;
     letter-spacing: 5px;
 }
+
 .mentors-card {
     background: #ad845b;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: 0;
     font-family: 'Inria-serif', serif;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.788);
     transition: transform 0.3s ease;
-    border-radius: 8px;
 }
-.mentors-card:hover{
+
+.mentors-card:hover {
     transform: translateY(-5px);
 }
+
 .mentors-img {
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
-.mentors-img:hover{
-    transform: translateY(-5px);
+.mentors-content{
+    padding: 1.5rem;
+    
 }
-.mentors-name{
+
+.mentors-name {
     font-size: 24px;
     font-family: "Inter", serif;
     font-weight: 700;
     letter-spacing: 3px;
     text-align: center;
 }
-.mentors-desc{
+
+.mentors-desc {
     font-size: 18px;
     font-family: "Raleway", serif;
 
 }
-.mentors-text{
+
+.mentors-text {
     font-size: 16px;
     font-family: "Inter", serif;
     text-align: justify;
@@ -167,14 +173,17 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .mentor-grid, .mentors-grid {
+
+    .mentor-grid,
+    .mentors-grid {
         grid-template-columns: 1fr;
     }
 
     .page-title {
         font-size: var(--fs-2);
     }
-    .mentors-title{
+
+    .mentors-title {
         font-size: var(--fs-2);
         letter-spacing: 2px;
     }
@@ -196,11 +205,12 @@
     .mhero {
         height: 70vh;
     }
-    .mentors-desc
-    {
+
+    .mentors-desc {
         font-size: 16px;
     }
-    .mentors-text{
+
+    .mentors-text {
         font-size: 14px;
     }
 }
