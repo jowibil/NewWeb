@@ -92,7 +92,7 @@
 }
 
 .mentors-card {
-    background: #ad845b;
+    background: white;
     color: white;
     display: flex;
     flex-direction: column;
@@ -101,6 +101,8 @@
     font-family: 'Inria-serif', serif;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.788);
     transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .mentors-card:hover {
@@ -115,6 +117,7 @@
 }
 .mentors-content{
     padding: 1.5rem;
+    color: black;
     
 }
 
@@ -124,11 +127,13 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-align: center;
+    color: var(--accent-color);
 }
 
 .mentors-desc {
     font-size: 18px;
     font-family: "Raleway", serif;
+    color: var(--secondary-color);
 
 }
 
