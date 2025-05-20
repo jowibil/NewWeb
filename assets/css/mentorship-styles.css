@@ -51,6 +51,10 @@
     text-align: center;
     font-family: 'Inria-serif', serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.788);
+    transition: transform 0.3s ease;
+}
+.mentor-card:hover{
+    transform: translateY(-5px);
 }
 
 .mentor-card-img {
@@ -70,8 +74,63 @@
     font-size: var(--fs-33);
 }
 
+.mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0rem 3rem 0rem;
+    max-width: 800px;
+    margin: auto;
+}
+.mentors-title{
+    font-family: "Bebas Neue", serif;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.mentors-card {
+    background: #ad845b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    font-family: 'Inria-serif', serif;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.788);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+.mentors-card:hover{
+    transform: translateY(-5px);
+}
+.mentors-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.mentors-img:hover{
+    transform: translateY(-5px);
+}
+.mentors-name{
+    font-size: 24px;
+    font-family: "Inter", serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.mentors-desc{
+    font-size: 18px;
+    font-family: "Raleway", serif;
 
-
+}
+.mentors-text{
+    font-size: 16px;
+    font-family: "Inter", serif;
+    text-align: justify;
+}
 
 
 /* HERO CSS */
@@ -108,12 +167,16 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .mentor-grid {
+    .mentor-grid, .mentors-grid {
         grid-template-columns: 1fr;
     }
 
     .page-title {
         font-size: var(--fs-2);
+    }
+    .mentors-title{
+        font-size: var(--fs-2);
+        letter-spacing: 2px;
     }
 
     .mhero h1 {
@@ -132,5 +195,12 @@
 
     .mhero {
         height: 70vh;
+    }
+    .mentors-desc
+    {
+        font-size: 16px;
+    }
+    .mentors-text{
+        font-size: 14px;
     }
 }
