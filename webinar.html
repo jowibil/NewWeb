@@ -184,7 +184,29 @@
 
 
 
-
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Get the values from the form
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            // Create an object to store the form data
+            const formData = {
+                name: name,
+                surname: surname,
+                email: email,
+                message: message
+            };
+            // Store the form data in local storage
+            localStorage.setItem('registrationData', JSON.stringify(formData));
+            // Show a prompt indicating that the registration was successful
+            alert('Registration successful!');
+            // Optionally, you can clear the form fields after submission
+            document.getElementById('register-form').reset();
+        });
+    </script>
     <script src="./assets/js/index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
