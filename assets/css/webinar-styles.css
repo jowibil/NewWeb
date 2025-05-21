@@ -224,6 +224,9 @@ textarea {
     .web-title {
         font-size: var(--fs-2);
     }
+    .reg-btn{
+        font-size: var(--fs-3);
+    }
 }
 @media (min-width: 768px) {
     .web-grid {
