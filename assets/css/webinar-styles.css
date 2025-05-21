@@ -27,7 +27,8 @@ a {
     text-decoration: none;
 }
 
-.page-title{
+
+.page-title {
     text-align: center;
     font-size: var(--fs-1);
     margin: 5rem 0rem 4rem 0rem;
@@ -35,19 +36,20 @@ a {
 
 .web-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem 0rem 3rem 0rem;
     max-width: 800px;
     margin: auto;
 
 }
+
 .web-card {
     background: var(--accent-color);
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 12px;
     text-align: left;
     font-family: 'Inria-serif', serif;
@@ -55,10 +57,10 @@ a {
 }
 
 .date-time {
-    align-self: flex-start;
+    align-self: flex-end;
     color: white;
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 4.25rem;
+    height: 4.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,23 +73,26 @@ a {
 }
 
 .month {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .day {
-    font-size: 35px;
+    font-size: 30px;
     margin-top: -10px;
 }
-.web-title{
+
+.web-title {
     font-size: var(--fs-3);
     text-align: center;
     margin-bottom: 0.5rem;
 }
-.web-sub{
+
+.web-sub {
     font-size: 1.05rem;
     text-align: center;
 }
-.web-schedule{
+
+.web-schedule {
     background: #EDDAA8;
     text-align: center;
     color: black;
@@ -117,7 +122,8 @@ a {
     transition: background-color 0.3s ease;
     border-radius: 8px;
 }
-.reg-btn:hover{
+
+.reg-btn:hover {
     background-color: var(--secondary-color);
     scale: calc(1.1);
 }
@@ -220,7 +226,7 @@ textarea {
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .web-grid {
         grid-template-columns: 1fr;
     }
@@ -228,5 +234,16 @@ textarea {
     .web-title {
         font-size: var(--fs-2);
     }
+} */
+@media (min-width: 768px) {
+    .web-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (max-width: 600px) {
+    .webinar-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
