@@ -96,7 +96,7 @@ header {
 }
 
 /* Medium screens (650px and up) */
-@media (max-width: 500px){
+@media (max-width: 720px){
     header{
         background: #ffbd59;
         border-bottom: none;
