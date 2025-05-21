@@ -1,6 +1,6 @@
 /* Header Styles */
 header {
-    background-color: rgba(255, 255, 255);
+    background-color: #FFEEAD;
     border-bottom: 1px solid black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -34,7 +34,7 @@ header {
 }
 
 .nav-link {
-    color: var(--dark-color);
+    color: black;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -96,6 +96,21 @@ header {
 }
 
 /* Medium screens (650px and up) */
+@media (max-width: 500px){
+    header{
+        background: #ffbd59;
+        border-bottom: none;
+    }
+    .nav-link{
+        color: rgb(255, 255, 255);
+    }
+    .nav-link:hover{
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+
 @media (min-width: 650px) {
     .navbar {
         padding: 1rem 0;

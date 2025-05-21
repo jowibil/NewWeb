@@ -145,7 +145,7 @@
 
     & .textbanner{
         position: absolute;
-        top: 50px;
+        top: 150px;
         z-index: 999;
         margin: 20px;
         font-size: 6rem;
@@ -263,7 +263,7 @@
 
     & .textbanner{
         position: absolute;
-        top: 50px;
+        top: 150px;
         z-index: 999;
         margin: 20px;
         font-size: 5rem;
@@ -352,7 +352,7 @@
 
     & .textbanner{
         position: absolute;
-        top: 100px;
+        top: 150px;
         z-index: 999;
         margin: 20px;
         font-size: 6rem;

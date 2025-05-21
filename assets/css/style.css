@@ -246,6 +246,11 @@ section {
     color: white;
 }
 
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 .issue-content {
     display: none;
     padding: 2rem;
@@ -415,3 +420,4 @@ footer {
         max-width: 600px;
     }
 }
+

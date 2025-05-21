@@ -24,7 +24,8 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">SpectrumEquity</a>
+                <img src="./assets/images/logo.png" alt="Gender inequality illustration" class="logo" width="15%"
+                    height="10%">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
@@ -92,8 +93,8 @@
                 <div class="forum-card">
                     <div class="card-content">
                         <div class="card-title">
-                            <a
-                                href="https://www.upou.edu.ph/news/students-and-faculty-discuss-women-and-gender-studies-as-womens-month-comes-to-a-close/">Students
+                            <a href="https://www.upou.edu.ph/news/students-and-faculty-discuss-women-and-gender-studies-as-womens-month-comes-to-a-close/"
+                                id="demo-link" rel="noopener noreferrer">Students
                                 and Faculty Discuss "Women and Gender Studies" as Women's Month Comes to a
                                 Close</a>
                         </div>
@@ -107,9 +108,10 @@
                                 <span class="stat-icon">📝</span>
                                 <span>427 POSTS</span>
                             </div>
-                            <div class="stat">
-                                <span class="stat-icon">👥</span>
-                                <span>340 MEMBERS</span>
+                            <div class="stat sharebtn" role="button" tabindex="0" aria-label="Share link 1"
+                                data-link="https://www.upou.edu.ph/news/students-and-faculty-discuss-women-and-gender-studies-as-womens-month-comes-to-a-close/">
+                                <span class="stat-icon" aria-hidden="true">🔗</span>
+                                <span class="share-text">SHARE</span>
                             </div>
                         </div>
                     </div>
@@ -131,9 +133,10 @@
                                 <span class="stat-icon">📝</span>
                                 <span>427 POSTS</span>
                             </div>
-                            <div class="stat">
-                                <span class="stat-icon">👥</span>
-                                <span>340 MEMBERS</span>
+                            <div class="stat sharebtn" role="button" tabindex="0" aria-label="Share link 2"
+                                data-link="https://philippines.unfpa.org/en/news/unlocking-gender-equality-philippines">
+                                <span class="stat-icon" aria-hidden="true">🔗</span>
+                                <span class="share-text">SHARE</span>
                             </div>
                         </div>
                     </div>
@@ -158,9 +161,10 @@
                                 <span class="stat-icon">📝</span>
                                 <span>427 POSTS</span>
                             </div>
-                            <div class="stat">
-                                <span class="stat-icon">👥</span>
-                                <span>340 MEMBERS</span>
+                            <div class="stat sharebtn" role="button" tabindex="0" aria-label="Share link 3"
+                                data-link="https://www.pids.gov.ph/details/news/in-the-news/the-gender-pay-gap-and-how-we-can-overcome-it">
+                                <span class="stat-icon" aria-hidden="true">🔗</span>
+                                <span class="share-text">SHARE</span>
                             </div>
                         </div>
                     </div>
@@ -185,9 +189,10 @@
                                 <span class="stat-icon">📝</span>
                                 <span>427 POSTS</span>
                             </div>
-                            <div class="stat">
-                                <span class="stat-icon">👥</span>
-                                <span>340 MEMBERS</span>
+                            <div class="stat sharebtn" role="button" tabindex="0" aria-label="Share link 4"
+                                data-link="https://www.hrw.org/report/2017/06/22/just-let-us-be/discrimination-against-lgbt-students-philippines">
+                                <span class="stat-icon" aria-hidden="true">🔗</span>
+                                <span class="share-text">SHARE</span>
                             </div>
                         </div>
                     </div>
@@ -205,7 +210,7 @@
                     <p>Transforming workplace cultures through comprehensive education and training to create inclusive
                         environments where all genders have equal opportunities.</p>
                 </div>
-    
+
                 <div class="footer-col">
                     <!-- <h3>Quick Links</h3>
                         <ul class="footer-links">
@@ -216,7 +221,7 @@
                             <li><a href="#about">About Us</a></li>
                         </ul> -->
                 </div>
-    
+
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
@@ -226,12 +231,80 @@
                     </ul>
                 </div>
             </div>
-    
+
             <div class="copyright">
                 <p>&copy; 2025 SpectrumEquity. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div id="toast" aria-live="polite" aria-atomic="true"></div>
+    <script>
+        (function () {
+            const toast = document.getElementById('toast');
+            const shareButtons = document.querySelectorAll('.sharebtn');
+
+            function showToast(message) {
+                toast.textContent = message;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            }
+
+            function fallbackCopyText(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed'; // Prevent scroll jump
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        showToast('Link copied to clipboard!');
+                    } else {
+                        showToast('Failed to copy link.');
+                    }
+                } catch (err) {
+                    showToast('Failed to copy link.');
+                }
+                document.body.removeChild(textArea);
+            }
+
+            function copyLink(link) {
+                if (!link) {
+                    showToast('No link to copy.');
+                    return;
+                }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(link).then(() => {
+                        showToast('Link copied to clipboard!');
+                    }).catch(() => {
+                        fallbackCopyText(link);
+                    });
+                } else {
+                    fallbackCopyText(link);
+                }
+            }
+
+            shareButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const linkToCopy = btn.getAttribute('data-link');
+                    copyLink(linkToCopy);
+                });
+                btn.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const linkToCopy = btn.getAttribute('data-link');
+                        copyLink(linkToCopy);
+                    }
+                });
+            });
+        })();
+    </script>
     <script src="./assets/js/index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
